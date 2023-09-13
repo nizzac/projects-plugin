@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Record
+
+# Model Form Field configuration
+form: $/impelling/projects/models/record/fields.yaml
+
+# Model Class name
+modelClass: Impelling\Projects\Models\Record
+
+# Default redirect location
+defaultRedirect: impelling/projects/records
+
+# Create page
+create:
+    title: backend::lang.form.create_title
+    redirect: impelling/projects/records/update/:id
+    redirectClose: impelling/projects/records
+
+# Update page
+update:
+    title: backend::lang.form.update_title
+    redirect: impelling/projects/records
+    redirectClose: impelling/projects/records
+
+# Preview page
+preview:
+    title: backend::lang.form.preview_title

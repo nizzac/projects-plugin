@@ -1,0 +1,21 @@
+# ===================================
+#  List Column Definitions
+# ===================================
+
+columns:
+    title:
+        label: Title
+
+    assignee:
+        label: Assignee
+
+    project[name]:
+        label: Project
+
+    status:
+        label: Status
+
+    due_date:
+        label: Due date
+        type: datetime
+        format: d/m/y
