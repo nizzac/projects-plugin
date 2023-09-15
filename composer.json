@@ -1,7 +1,7 @@
 {
-    "name": "impelling/projects-plugin",
+    "name": "ncarps/projects-plugin",
     "type": "october-plugin",
-    "description": "No description provided yet...",
+    "description": "",
     "require": {
         "composer/installers": "~1.0"
     }
