@@ -1,4 +1,4 @@
-<?php namespace Impelling\Projects\Models;
+<?php namespace Ncarps\Projects\Models;
 
 use Model;
 use Backend\Models\User;
@@ -15,7 +15,7 @@ class Record extends Model
     /**
      * @var string table name
      */
-    public $table = 'impelling_projects_records';
+    public $table = 'ncarps_projects_records';
 
     /**
      * @var array rules for validation
@@ -30,7 +30,7 @@ class Record extends Model
     ];
 
     public function beforeSave()
-    {   
+    {
         $this->duration = $this->calculateDuration();
         $this->project_id = $this->task->project_id;
     }
@@ -49,18 +49,18 @@ class Record extends Model
     public function getDurationString()
     {
         $duration = [];
-        
+
         if (!$this->duration) {
             return;
         }
 
-        $hours = floor($this->duration / 60);        
+        $hours = floor($this->duration / 60);
         $minutes = $this->duration - ($hours * 60);
-        
+
         if ($hours > 0) {
             $duration['hours'] = "{$hours}h";
         }
-        
+
         if ($minutes > 0) {
             $duration['minutes'] = "{$minutes}m";
         }
@@ -74,7 +74,7 @@ class Record extends Model
 
     public function getDurationStringAttribute()
     {
-        return $this->getDurationString();    
+        return $this->getDurationString();
     }
 
     public function filterFields($fields, $context)
@@ -102,7 +102,7 @@ class Record extends Model
     {
         return $query->whereBetween('start', [now()->startOfMonth()->subMonth(), now()->endOfMonth()->subMonth()]);
     }
-    
+
     public function scopeBillableThisMonth($query)
     {
         return $query->billable()->thisMonth();

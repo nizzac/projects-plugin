@@ -3,16 +3,16 @@
 # ===================================
 
 # Model List Column configuration
-list: $/impelling/projects/models/task/columns.yaml
+list: $/ncarps/projects/models/task/columns.yaml
 
 # Model Class name
-modelClass: Impelling\Projects\Models\Task
+modelClass: Ncarps\Projects\Models\Task
 
 # List Title
 title: Manage Tasks
 
 # Link URL for each record
-recordUrl: impelling/projects/tasks/update/:id
+recordUrl: ncarps/projects/tasks/update/:id
 
 # Message to display if the list is empty
 noRecordsMessage: backend::lang.list.no_records

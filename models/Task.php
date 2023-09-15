@@ -1,4 +1,4 @@
-<?php namespace Impelling\Projects\Models;
+<?php namespace Ncarps\Projects\Models;
 
 use Model;
 use Backend\Models\User;
@@ -15,7 +15,7 @@ class Task extends Model
     /**
      * @var string table name
      */
-    public $table = 'impelling_projects_tasks';
+    public $table = 'ncarps_projects_tasks';
 
     /**
      * @var array rules for validation

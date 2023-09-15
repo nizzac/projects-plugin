@@ -1,9 +1,9 @@
-<?php namespace Impelling\Projects\Controllers;
+<?php namespace Ncarps\Projects\Controllers;
 
 use BackendMenu;
 use Backend\Classes\Controller;
-use Impelling\Projects\Models\Record;
-use Impelling\Projects\Models\Project;
+use Ncarps\Projects\Models\Record;
+use Ncarps\Projects\Models\Project;
 
 /**
  * Projects Backend Controller
@@ -30,7 +30,7 @@ class Projects extends Controller
     /**
      * @var array required permissions
      */
-    public $requiredPermissions = ['impelling.projects.projects'];
+    public $requiredPermissions = ['ncarps.projects.projects'];
 
     /**
      * __construct the controller
@@ -39,7 +39,7 @@ class Projects extends Controller
     {
         parent::__construct();
 
-        BackendMenu::setContext('Impelling.Projects', 'projects', 'projects');
+        BackendMenu::setContext('Ncarps.Projects', 'projects', 'projects');
     }
 
     public function update($projectId = null)

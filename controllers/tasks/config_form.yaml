@@ -6,25 +6,25 @@
 name: Task
 
 # Model Form Field configuration
-form: $/impelling/projects/models/task/fields.yaml
+form: $/ncarps/projects/models/task/fields.yaml
 
 # Model Class name
-modelClass: Impelling\Projects\Models\Task
+modelClass: Ncarps\Projects\Models\Task
 
 # Default redirect location
-defaultRedirect: impelling/projects/tasks
+defaultRedirect: ncarps/projects/tasks
 
 # Create page
 create:
     title: backend::lang.form.create_title
-    redirect: impelling/projects/tasks/update/:id
-    redirectClose: impelling/projects/tasks
+    redirect: ncarps/projects/tasks/update/:id
+    redirectClose: ncarps/projects/tasks
 
 # Update page
 update:
     title: backend::lang.form.update_title
-    redirect: impelling/projects/tasks
-    redirectClose: impelling/projects/tasks
+    redirect: ncarps/projects/tasks
+    redirectClose: ncarps/projects/tasks
 
 # Preview page
 preview:

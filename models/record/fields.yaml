@@ -16,7 +16,7 @@ fields:
     task:
         label: Task
         type: recordfinder
-        list: ~/plugins/impelling/projects/models/task/columns.yaml
+        list: ~/plugins/ncarps/projects/models/task/columns.yaml
         recordsPerPage: 10
         title: Choose Task
         nameFrom: title
@@ -51,7 +51,7 @@ fields:
         type: textarea
         span: row
         cssClass: col-md-12
-    
+
     billable:
         label: Billable
         type: checkbox

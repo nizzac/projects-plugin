@@ -1,4 +1,4 @@
-<?php namespace Impelling\Projects\Models;
+<?php namespace Ncarps\Projects\Models;
 
 use Model;
 
@@ -14,7 +14,7 @@ class Project extends Model
     /**
      * @var string table name
      */
-    public $table = 'impelling_projects_projects';
+    public $table = 'ncarps_projects_projects';
 
     /**
      * @var array rules for validation
@@ -37,7 +37,7 @@ class Project extends Model
         $this->allowance = $this->allowance * 60;
         $this->rate = $this->rate * 100;
     }
-    
+
     public function afterFetch()
     {
         $this->allowance = $this->allowance / 60;

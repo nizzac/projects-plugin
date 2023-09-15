@@ -7,7 +7,7 @@ fields:
     project:
         label: Project
         type: recordfinder
-        list: ~/plugins/impelling/projects/models/project/columns.yaml
+        list: ~/plugins/ncarps/projects/models/project/columns.yaml
         recordsPerPage: 10
         title: Choose Project
         nameFrom: name
