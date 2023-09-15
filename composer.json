@@ -1,8 +1,8 @@
 {
-    "name": "ncarps/projects-plugin",
+    "name": "impelling/projects-plugin",
     "type": "october-plugin",
-    "description": "A simple project, tasks and time management plugin",
+    "description": "No description provided yet...",
     "require": {
-        "compose/installers": "~1.0"
+        "composer/installers": "~1.0"
     }
 }
