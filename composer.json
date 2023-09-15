@@ -1,0 +1,8 @@
+{
+    "name": "ncarps/projects-plugin",
+    "type": "october-plugin",
+    "description": "A simple project, tasks and time management plugin",
+    "require": {
+        "compose/installers": "~1.0"
+    }
+}
