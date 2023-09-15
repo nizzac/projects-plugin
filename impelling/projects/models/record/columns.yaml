@@ -6,7 +6,6 @@ columns:
     
     user[full_name]:
         label: User
-        relation: user
 
     start:
         label: Start

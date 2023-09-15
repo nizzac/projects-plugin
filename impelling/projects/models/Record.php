@@ -1,6 +1,7 @@
 <?php namespace Impelling\Projects\Models;
 
 use Model;
+use Backend\Models\User;
 
 /**
  * Record Model
@@ -24,16 +25,8 @@ class Record extends Model
     public $dates = ['start', 'end'];
 
     public $belongsTo = [
-        'user' => [
-            \Backend\Models\User::class,
-            'key' => 'backend_user_id',
-            'otherKey' => 'id'
-        ],
-        'task' => [
-            Task::class,
-            'key' => 'task_id',
-            'otherKey' => 'id'
-        ],
+        'user' => [User::class],
+        'task' => [Task::class]
     ];
 
     public function beforeSave()
@@ -95,6 +88,11 @@ class Record extends Model
         return $query->where('billable', true);
     }
 
+    public function scopeNonBillable($query)
+    {
+        return $query->where('billable', false);
+    }
+
     public function scopeThisMonth($query)
     {
         return $query->whereBetween('start', [now()->startOfMonth(), now()->endOfMonth()]);
@@ -113,5 +111,15 @@ class Record extends Model
     public function scopeBillableLastMonth($query)
     {
         return $query->billable()->lastMonth();
+    }
+
+    public function scopeNonBillableThisMonth($query)
+    {
+        return $query->nonBillable()->thisMonth();
+    }
+
+    public function scopeNonBillableLastMonth($query)
+    {
+        return $query->nonBillable()->lastMonth();
     }
 }

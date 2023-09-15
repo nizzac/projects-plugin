@@ -6,7 +6,7 @@ columns:
     title:
         label: Title
 
-    assignee:
+    user[full_name]:
         label: Assignee
 
     project[name]:

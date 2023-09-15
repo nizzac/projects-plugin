@@ -31,4 +31,26 @@ class Project extends Model
             'through' => Task::class
         ]
     ];
+
+    public function beforeSave()
+    {
+        $this->allowance = $this->allowance * 60;
+        $this->rate = $this->rate * 100;
+    }
+    
+    public function afterFetch()
+    {
+        $this->allowance = $this->allowance / 60;
+        $this->rate = $this->rate / 100;
+    }
+
+    public function getBillableHoursLastMonthAttribute()
+    {
+        return Record::where('project_id', $this->id)->billableLastMonth()->get()->sum('duration_value') / 60;
+    }
+
+    public function getTotalRemaningHoursThisMonthAttribute()
+    {
+        return $this->allowance - (Record::where('project_id', $this->id)->billableThisMonth()->get()->sum('duration_value') / 60);
+    }
 }

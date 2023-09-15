@@ -20,8 +20,10 @@ return new class extends Migration
             $table->engine = 'InnoDB';
             $table->increments('id');
             $table->string('name')->nullable();
-            $table->softDeletes();
+            $table->integer('allowance')->nullable();
+            $table->integer('rate')->nullable();
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

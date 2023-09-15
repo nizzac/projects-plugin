@@ -6,3 +6,21 @@ fields:
     name:
         label: Project Name
         required: true
+        span: row
+        cssClass: col-md-12
+
+    allowance:
+        label: Budget
+        type: number
+        comment: Monthly time allowance in hours
+        span: row
+        cssClass: col-md-6
+
+    rate:
+        label: Rate
+        type: number
+        comment: Hourly rate to charge client
+        span: row
+        cssClass: col-md-6
+        
+

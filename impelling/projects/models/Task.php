@@ -1,6 +1,7 @@
 <?php namespace Impelling\Projects\Models;
 
 use Model;
+use Backend\Models\User;
 
 /**
  * Task Model
@@ -22,16 +23,8 @@ class Task extends Model
     public $rules = [];
 
     public $belongsTo = [
-        'project' => [
-            Project::class,
-            'key' => 'project_id',
-            'otherKey' => 'id'
-        ],
-        'user' => [
-            \Backend\Models\User::class,
-            'key' => 'backend_user_id',
-            'otherKey' => 'id'
-        ]
+        'project' => [Project::class],
+        'user' => [User::class]
     ];
 
     public function getStatusOptions()

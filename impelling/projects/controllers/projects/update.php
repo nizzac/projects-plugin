@@ -5,11 +5,6 @@
     </ol>
 <?php Block::endPut() ?>
 
-total_this_month: <?=$total_this_month?><br>
-total_last_month: <?=$total_last_month?><br>
-billable_this_month: <?=$billable_this_month?><br>
-billable_last_month: <?=$billable_last_month?><br>
-
 <?php if (!$this->fatalError): ?>
 
     <?= Form::open(['class' => 'layout']) ?>

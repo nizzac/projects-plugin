@@ -19,17 +19,17 @@ return new class extends Migration
         Schema::create('impelling_projects_tasks', function(Blueprint $table) {
             $table->engine = 'InnoDB';
             $table->increments('id');
-            $table->integer('backend_user_id')->unsigned();
+            $table->integer('user_id')->unsigned();
             $table->integer('project_id')->unsigned();
             $table->string('title')->nullable();
             $table->text('description')->nullable();
             $table->string('status')->nullable();
             $table->string('estimate')->nullable();
             $table->timestamp('due_date')->nullable();
-            $table->softDeletes();
             $table->timestamps();
+            $table->softDeletes();
 
-            $table->foreign('backend_user_id')->references('id')->on('backend_users');
+            $table->foreign('user_id')->references('id')->on('backend_users');
             $table->foreign('project_id')->references('id')->on('impelling_projects_projects');
         });
     }

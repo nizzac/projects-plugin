@@ -3,6 +3,7 @@
 use BackendMenu;
 use Backend\Classes\Controller;
 use Impelling\Projects\Models\Record;
+use Impelling\Projects\Models\Project;
 
 /**
  * Projects Backend Controller
@@ -43,10 +44,9 @@ class Projects extends Controller
 
     public function update($projectId = null)
     {
-        $totalThisMonth = $this->vars['total_this_month'] = Record::where('project_id', $projectId)->thisMonth()->get()->sum('duration_value');
-        $totalLastMonth = $this->vars['total_last_month'] = Record::where('project_id', $projectId)->lastMonth()->get()->sum('duration_value');
-        $billableThisMonth = $this->vars['billable_this_month'] = Record::where('project_id', $projectId)->billableThisMonth()->get()->sum('duration_value');
-        $billableLastMonth = $this->vars['billable_last_month'] = Record::where('project_id', $projectId)->billableLastMonth()->get()->sum('duration_value');
+        // $project = Project::find($projectId);
+        // $billableLastMonth = $this->vars['billable_last_month'] = Record::where('project_id', $project->id)->billableLastMonth()->get()->sum('duration_value') / 60;
+        // $allowance = $this->vars['allowance'] = $project->allowance;
 
         return parent::update($projectId);
     }
