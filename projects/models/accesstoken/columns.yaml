@@ -1,0 +1,23 @@
+# ===================================
+#  List Column Definitions
+# ===================================
+
+columns:
+    project[name]:
+        label: Project
+
+    access_token:
+        label: Access Token
+
+    expiry:
+        label: Expiry Date
+        type: datetime
+        format: d/m/y
+
+    url:
+        label: URL
+
+    enabled:
+        label: Enabled
+        type: switch
+

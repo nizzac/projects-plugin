@@ -1,0 +1,41 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+
+    project:
+        label: Project
+        type: recordfinder
+        list: ~/plugins/impelling/projects/models/project/columns.yaml
+        recordsPerPage: 10
+        title: Choose Project
+        nameFrom: name
+        span: row
+        cssClass: col-md-12
+
+    access_token:
+        label: Access Token
+        type: textarea
+        span: row
+        cssClass: col-md-12
+
+    expiry:
+        label: Expiry Date
+        type: datepicker
+        mode: date
+        span: row
+        cssClass: col-md-6
+
+    url:
+        label: URL
+        type: text
+        span: row
+        cssClass: col-md-6
+
+    enabled:
+        label: Enabled
+        type: checkbox
+        span: row
+        cssClass: col-md-12
+
