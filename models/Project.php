@@ -1,10 +1,10 @@
-<?php namespace Impelling\Projects\Models;
+<?php namespace Unspun\Projects\Models;
 
 use Str;
 use Model;
 use RainLab\User\Facades\Auth;
-use Impelling\Projects\Classes\Traits\HasApiTokens;
-use Impelling\Projects\Classes\Contracts\HasApiTokens as HasApiTokensContract;
+use Unspun\Projects\Classes\Traits\HasApiTokens;
+use Unspun\Projects\Classes\Contracts\HasApiTokens as HasApiTokensContract;
 
 /**
  * Project Model
@@ -19,7 +19,7 @@ class Project extends Model implements HasApiTokensContract
     /**
      * @var string table name
      */
-    public $table = 'impelling_projects_projects';
+    public $table = 'unspun_projects_projects';
 
     /**
      * @var array rules for validation
@@ -37,9 +37,9 @@ class Project extends Model implements HasApiTokensContract
         ]
     ];
 
-    public function afterCreate()
+    public function beforeCreate()
     {
-        $this->project_id = Str::random(32);
+        $this->api_id = Str::random(32);
     }
 
     public function beforeSave()
@@ -61,7 +61,6 @@ class Project extends Model implements HasApiTokensContract
 
     public function getTotalRemaningHoursThisMonthAttribute()
     {
-        $loggedIn = Auth::check();
         return $this->allowance - (Record::where('project_id', $this->id)->billableThisMonth()->get()->sum('duration_value') / 60);
     }
 }

@@ -1,11 +1,11 @@
-<?php namespace Impelling\Projects\Controllers;
+<?php namespace Unspun\Projects\Controllers;
 
 use Str;
+use stdClass;
 use BackendMenu;
 use Backend\Classes\Controller;
-use Impelling\Projects\Models\Record;
-use Impelling\Projects\Models\Project;
-use Impelling\Projects\Models\AccessToken;
+use Unspun\Projects\Models\Task;
+use Unspun\Projects\Models\AccessToken;
 
 /**
  * Projects Backend Controller
@@ -32,7 +32,7 @@ class Projects extends Controller
     /**
      * @var array required permissions
      */
-    public $requiredPermissions = ['impelling.projects.projects'];
+    public $requiredPermissions = ['unspun.projects.projects'];
 
     /**
      * __construct the controller
@@ -41,14 +41,14 @@ class Projects extends Controller
     {
         parent::__construct();
 
-        BackendMenu::setContext('Impelling.Projects', 'projects', 'projects');
+        BackendMenu::setContext('Unspun.Projects', 'projects', 'projects');
     }
 
     public function update($projectId = null)
     {
-        $project = Project::find($projectId);
-        $billableLastMonth = $this->vars['billable_last_month'] = Record::where('project_id', $project->id)->billableLastMonth()->get()->sum('duration_value') / 60;
-        $allowance = $this->vars['allowance'] = $project->allowance;
+        // $project = Project::find($projectId);
+        // $billableLastMonth = $this->vars['billable_last_month'] = Record::where('project_id', $project->id)->billableLastMonth()->get()->sum('duration_value') / 60;
+        // $allowance = $this->vars['allowance'] = $project->allowance;
 
         return parent::update($projectId);
     }
@@ -57,7 +57,8 @@ class Projects extends Controller
     {
         $code = Str::random(40);
 
-        AccessToken::where('project_id', request()->project_id)->update(['enabled' => false]);
+        // Delete any existing access tokens for this project
+        AccessToken::where('project_id', request()->project_id)->delete();
 
         $accessToken = new AccessToken;
         $accessToken->access_token = hash('sha256', $code);
@@ -71,5 +72,33 @@ class Projects extends Controller
         return [
             '#accessToken' => $this->makePartial('access_token')
         ];
+    }
+
+    public function board($projectId)
+    {
+        $this->title = "Project Tasks";
+        $this->vars['projectId'] = $projectId;
+    }
+
+    public function onGetTasks()
+    {
+        $tasks = collect();
+
+        foreach((new Task)->getStatusOptions() as $status => $label) {
+            $t = new stdClass;
+            $t->name = $label;
+            $t->status = $status;
+            $t->tasks = Task::where('project_id', post('project'))->with(['user'])->status($status)->get();
+
+            $tasks->push($t);
+        }
+
+        return $tasks;
+    }
+
+    public function onUpdateTaskStatus()
+    {
+        Task::where('id', post('task'))->update(['status' => post('status')]);
+        return response()->json(200);
     }
 }

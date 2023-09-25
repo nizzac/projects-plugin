@@ -1,4 +1,4 @@
-<?php namespace Impelling\Projects\Models;
+<?php namespace Unspun\Projects\Models;
 
 use Model;
 use Backend\Models\User;
@@ -15,7 +15,7 @@ class Record extends Model
     /**
      * @var string table name
      */
-    public $table = 'impelling_projects_records';
+    public $table = 'unspun_projects_records';
 
     /**
      * @var array rules for validation

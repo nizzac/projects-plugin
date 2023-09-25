@@ -6,25 +6,25 @@
 name: Project
 
 # Model Form Field configuration
-form: $/impelling/projects/models/project/fields.yaml
+form: $/unspun/projects/models/project/fields.yaml
 
 # Model Class name
-modelClass: Impelling\Projects\Models\Project
+modelClass: Unspun\Projects\Models\Project
 
 # Default redirect location
-defaultRedirect: impelling/projects/projects
+defaultRedirect: unspun/projects/projects
 
 # Create page
 create:
     title: backend::lang.form.create_title
-    redirect: impelling/projects/projects/update/:id
-    redirectClose: impelling/projects/projects
+    redirect: unspun/projects/projects/update/:id
+    redirectClose: unspun/projects/projects
 
 # Update page
 update:
     title: backend::lang.form.update_title
-    redirect: impelling/projects/projects
-    redirectClose: impelling/projects/projects
+    redirect: unspun/projects/projects
+    redirectClose: unspun/projects/projects
 
 # Preview page
 preview:

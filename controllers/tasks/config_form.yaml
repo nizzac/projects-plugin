@@ -6,25 +6,25 @@
 name: Task
 
 # Model Form Field configuration
-form: $/impelling/projects/models/task/fields.yaml
+form: $/unspun/projects/models/task/fields.yaml
 
 # Model Class name
-modelClass: Impelling\Projects\Models\Task
+modelClass: Unspun\Projects\Models\Task
 
 # Default redirect location
-defaultRedirect: impelling/projects/tasks
+defaultRedirect: unspun/projects/tasks
 
 # Create page
 create:
     title: backend::lang.form.create_title
-    redirect: impelling/projects/tasks/update/:id
-    redirectClose: impelling/projects/tasks
+    redirect: unspun/projects/tasks/update/:id
+    redirectClose: unspun/projects/tasks
 
 # Update page
 update:
     title: backend::lang.form.update_title
-    redirect: impelling/projects/tasks
-    redirectClose: impelling/projects/tasks
+    redirect: unspun/projects/tasks
+    redirectClose: unspun/projects/tasks
 
 # Preview page
 preview:

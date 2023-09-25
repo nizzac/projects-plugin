@@ -16,7 +16,7 @@ fields:
     task:
         label: Task
         type: recordfinder
-        list: ~/plugins/impelling/projects/models/task/columns.yaml
+        list: ~/plugins/unspun/projects/models/task/columns.yaml
         recordsPerPage: 10
         title: Choose Task
         nameFrom: title

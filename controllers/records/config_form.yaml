@@ -6,25 +6,25 @@
 name: Record
 
 # Model Form Field configuration
-form: $/impelling/projects/models/record/fields.yaml
+form: $/unspun/projects/models/record/fields.yaml
 
 # Model Class name
-modelClass: Impelling\Projects\Models\Record
+modelClass: Unspun\Projects\Models\Record
 
 # Default redirect location
-defaultRedirect: impelling/projects/records
+defaultRedirect: unspun/projects/records
 
 # Create page
 create:
     title: backend::lang.form.create_title
-    redirect: impelling/projects/records/update/:id
-    redirectClose: impelling/projects/records
+    redirect: unspun/projects/records/update/:id
+    redirectClose: unspun/projects/records
 
 # Update page
 update:
     title: backend::lang.form.update_title
-    redirect: impelling/projects/records
-    redirectClose: impelling/projects/records
+    redirect: unspun/projects/records
+    redirectClose: unspun/projects/records
 
 # Preview page
 preview:

@@ -1,9 +1,9 @@
 <?php
 
-namespace Impelling\Projects\Middleware;
+namespace Unspun\Projects\Middleware;
 
 use Closure;
-use Impelling\Projects\Models\AccessToken;
+use Unspun\Projects\Models\AccessToken;
 
 class ProjectsMiddleware
 {

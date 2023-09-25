@@ -1,6 +1,0 @@
-v1.0.1:
-  - Add projects, tasks and times
-  - create_projects_table.php
-  - create_tasks_table.php
-  - create_records_table.php
-  - create_access_tokens_table.php

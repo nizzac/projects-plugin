@@ -3,16 +3,16 @@
 # ===================================
 
 # Model List Column configuration
-list: $/impelling/projects/models/accesstoken/columns.yaml
+list: $/unspun/projects/models/accesstoken/columns.yaml
 
 # Model Class name
-modelClass: Impelling\Projects\Models\AccessToken
+modelClass: Unspun\Projects\Models\AccessToken
 
 # List Title
 title: Manage Access Tokens
 
 # Link URL for each record
-recordUrl: impelling/projects/accesstokens/update/:id
+recordUrl: unspun/projects/accesstokens/update/:id
 
 # Message to display if the list is empty
 noRecordsMessage: backend::lang.list.no_records
