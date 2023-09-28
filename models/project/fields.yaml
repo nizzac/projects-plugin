@@ -11,7 +11,10 @@ fields:
 
     api_id@update:
         label: Api ID
+<<<<<<< HEAD
+=======
         readOnly: true
+>>>>>>> add-access-tokens
         span: row
         cssClass: col-md-12
 
@@ -29,9 +32,16 @@ fields:
         span: row
         cssClass: col-md-6
 
+<<<<<<< HEAD
+    access_token:
+        label: Access Token
+        type: partial
+        path: $/impelling/projects/models/project/fields/_access_token.htm
+=======
     access_token@update:
         label: Access Token
         type: partial
         path: $/unspun/projects/models/project/fields/_access_token.htm
+>>>>>>> add-access-tokens
         
 

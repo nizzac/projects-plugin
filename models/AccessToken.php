@@ -1,4 +1,8 @@
+<<<<<<< HEAD
+<?php namespace Impelling\Projects\Models;
+=======
 <?php namespace Unspun\Projects\Models;
+>>>>>>> add-access-tokens
 
 use Model;
 
@@ -14,7 +18,11 @@ class AccessToken extends Model
     /**
      * @var string table name
      */
+<<<<<<< HEAD
+    public $table = 'impelling_projects_access_tokens';
+=======
     public $table = 'unspun_projects_access_tokens';
+>>>>>>> add-access-tokens
 
     /**
      * @var array rules for validation

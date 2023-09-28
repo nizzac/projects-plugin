@@ -1,3 +1,13 @@
+<<<<<<< HEAD
+<?php namespace Impelling\Projects\Controllers;
+
+use Str;
+use BackendMenu;
+use Backend\Classes\Controller;
+use Impelling\Projects\Models\Record;
+use Impelling\Projects\Models\Project;
+use Impelling\Projects\Models\AccessToken;
+=======
 <?php namespace Unspun\Projects\Controllers;
 
 use Str;
@@ -6,6 +16,7 @@ use BackendMenu;
 use Backend\Classes\Controller;
 use Unspun\Projects\Models\Task;
 use Unspun\Projects\Models\AccessToken;
+>>>>>>> add-access-tokens
 
 /**
  * Projects Backend Controller
@@ -32,7 +43,11 @@ class Projects extends Controller
     /**
      * @var array required permissions
      */
+<<<<<<< HEAD
+    public $requiredPermissions = ['impelling.projects.projects'];
+=======
     public $requiredPermissions = ['unspun.projects.projects'];
+>>>>>>> add-access-tokens
 
     /**
      * __construct the controller
@@ -41,14 +56,18 @@ class Projects extends Controller
     {
         parent::__construct();
 
+<<<<<<< HEAD
+        BackendMenu::setContext('Impelling.Projects', 'projects', 'projects');
+=======
         BackendMenu::setContext('Unspun.Projects', 'projects', 'projects');
+>>>>>>> add-access-tokens
     }
 
     public function update($projectId = null)
     {
-        // $project = Project::find($projectId);
-        // $billableLastMonth = $this->vars['billable_last_month'] = Record::where('project_id', $project->id)->billableLastMonth()->get()->sum('duration_value') / 60;
-        // $allowance = $this->vars['allowance'] = $project->allowance;
+        $project = Project::find($projectId);
+        $billableLastMonth = $this->vars['billable_last_month'] = Record::where('project_id', $project->id)->billableLastMonth()->get()->sum('duration_value') / 60;
+        $allowance = $this->vars['allowance'] = $project->allowance;
 
         return parent::update($projectId);
     }
@@ -57,8 +76,12 @@ class Projects extends Controller
     {
         $code = Str::random(40);
 
+<<<<<<< HEAD
+        AccessToken::where('project_id', request()->project_id)->update(['enabled' => false]);
+=======
         // Delete any existing access tokens for this project
         AccessToken::where('project_id', request()->project_id)->delete();
+>>>>>>> add-access-tokens
 
         $accessToken = new AccessToken;
         $accessToken->access_token = hash('sha256', $code);
@@ -73,6 +96,8 @@ class Projects extends Controller
             '#accessToken' => $this->makePartial('access_token')
         ];
     }
+<<<<<<< HEAD
+=======
 
     public function board($projectId)
     {
@@ -112,4 +137,5 @@ class Projects extends Controller
 
         return response()->json(200);
     }
+>>>>>>> add-access-tokens
 }

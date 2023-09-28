@@ -1,5 +1,9 @@
 {
+<<<<<<< HEAD
+    "name": "impelling/projects-plugin",
+=======
     "name": "unspun/projects-plugin",
+>>>>>>> add-access-tokens
     "type": "october-plugin",
     "description": "A simple project and time management plugin",
     "require": {

@@ -1,4 +1,8 @@
+<<<<<<< HEAD
+<?php namespace Impelling\Projects\Updates;
+=======
 <?php namespace Unspun\Projects\Updates;
+>>>>>>> add-access-tokens
 
 use Schema;
 use October\Rain\Database\Schema\Blueprint;
@@ -16,7 +20,11 @@ return new class extends Migration
      */
     public function up()
     {
+<<<<<<< HEAD
+        Schema::create('impelling_projects_tasks', function(Blueprint $table) {
+=======
         Schema::create('unspun_projects_tasks', function(Blueprint $table) {
+>>>>>>> add-access-tokens
             $table->engine = 'InnoDB';
             $table->increments('id');
             $table->integer('user_id')->unsigned();
@@ -31,7 +39,11 @@ return new class extends Migration
             $table->softDeletes();
 
             $table->foreign('user_id')->references('id')->on('backend_users');
+<<<<<<< HEAD
+            $table->foreign('project_id')->references('id')->on('impelling_projects_projects');
+=======
             $table->foreign('project_id')->references('id')->on('unspun_projects_projects');
+>>>>>>> add-access-tokens
         });
     }
 
@@ -40,6 +52,10 @@ return new class extends Migration
      */
     public function down()
     {
+<<<<<<< HEAD
+        Schema::dropIfExists('impelling_projects_tasks');
+=======
         Schema::dropIfExists('unspun_projects_tasks');
+>>>>>>> add-access-tokens
     }
 };

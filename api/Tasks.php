@@ -1,5 +1,10 @@
 <?php
 
+<<<<<<< HEAD
+namespace Impelling\Projects\Api;
+
+use Impelling\Projects\Models\Project;
+=======
 namespace Unspun\Projects\Api;
 
 use Backend\Models\User;
@@ -7,11 +12,17 @@ use Carbon\Carbon;
 use Exception;
 use Unspun\Projects\Models\Project;
 use Unspun\Projects\Models\Task;
+>>>>>>> add-access-tokens
 
 class Tasks
 {
     public function index($projectId)
     {
+<<<<<<< HEAD
+        $project = Project::with('tasks')->where('api_id', $projectId)->first();
+
+        return response()->json(['tasks' => $project->tasks], 200);
+=======
         $project = Project::with(['tasks.user'])->where('api_id', $projectId)->first();
 
         return response()->json($project->tasks, 200);
@@ -61,5 +72,6 @@ class Tasks
             return response()->json($exception->getMessage(), 200);
         };
 
+>>>>>>> add-access-tokens
     }
 }

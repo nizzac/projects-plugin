@@ -6,6 +6,15 @@
 name: Task
 
 # Model Form Field configuration
+<<<<<<< HEAD
+form: $/impelling/projects/models/task/fields.yaml
+
+# Model Class name
+modelClass: Impelling\Projects\Models\Task
+
+# Default redirect location
+defaultRedirect: impelling/projects/tasks
+=======
 form: $/unspun/projects/models/task/fields.yaml
 
 # Model Class name
@@ -13,18 +22,29 @@ modelClass: Unspun\Projects\Models\Task
 
 # Default redirect location
 defaultRedirect: unspun/projects/tasks
+>>>>>>> add-access-tokens
 
 # Create page
 create:
     title: backend::lang.form.create_title
+<<<<<<< HEAD
+    redirect: impelling/projects/tasks/update/:id
+    redirectClose: impelling/projects/tasks
+=======
     redirect: unspun/projects/tasks/update/:id
     redirectClose: unspun/projects/tasks
+>>>>>>> add-access-tokens
 
 # Update page
 update:
     title: backend::lang.form.update_title
+<<<<<<< HEAD
+    redirect: impelling/projects/tasks
+    redirectClose: impelling/projects/tasks
+=======
     redirect: unspun/projects/tasks
     redirectClose: unspun/projects/tasks
+>>>>>>> add-access-tokens
 
 # Preview page
 preview:
