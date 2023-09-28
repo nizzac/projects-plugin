@@ -22,7 +22,11 @@ class Task extends Model
     /**
      * @var array rules for validation
      */
-    public $rules = [];
+    public $rules = [
+        'project' => 'required',
+        'user' => 'required',
+        'title' => 'required',
+    ];
 
     public $dates = ['due_date'];
 
@@ -32,6 +36,16 @@ class Task extends Model
         'project' => [Project::class],
         'user' => [User::class]
     ];
+
+    public $hasMany = [
+        'records' => [Record::class]
+    ];
+
+    public function beforeCreate()
+    {
+        $otherTasksWithSameStatus = self::where('project_id', $this->project_id)->where('status', $this->status)->orderBy('sort_order', 'desc')->first();
+        $this->sort_order = $otherTasksWithSameStatus->sort_order+1;
+    }
 
     public function getStatusOptions()
     {
@@ -51,7 +65,7 @@ class Task extends Model
             $t = new stdClass;
             $t->name = $label;
             $t->status = $status;
-            $t->tasks = self::forProject($projectId)->with(['user'])->status($status)->get();
+            $t->tasks = self::forProject($projectId)->with(['user', 'records'])->status($status)->orderBy('sort_order')->get();
 
             $tasks->push($t);
         }

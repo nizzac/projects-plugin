@@ -24,7 +24,11 @@ class Project extends Model implements HasApiTokensContract
     /**
      * @var array rules for validation
      */
-    public $rules = [];
+    public $rules = [
+        'name' => 'required',
+        'allowance' => 'required|integer',
+        'rate' => 'required|integer',
+    ];
 
     public $hasMany = [
         'tasks' => Task::class

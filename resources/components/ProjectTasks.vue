@@ -52,5 +52,17 @@ function onEnd(event) {
       status: event.to.dataset.status
     }
   })
+
+  let tasksInNewStatus = state.tasks.filter(status => {
+    return status.status == event.to.dataset.status
+  })
+
+  window.oc.ajax('onUpdateTasksOrder', {
+    data: {
+      project: props.projectId,
+      tasks: tasksInNewStatus[0].tasks,
+      status: event.to.dataset.status
+    }
+  })
 }
 </script>

@@ -88,7 +88,7 @@ class Projects extends Controller
             $t = new stdClass;
             $t->name = $label;
             $t->status = $status;
-            $t->tasks = Task::where('project_id', post('project'))->with(['user'])->status($status)->get();
+            $t->tasks = Task::where('project_id', post('project'))->with(['user'])->orderBy('sort_order')->status($status)->get();
 
             $tasks->push($t);
         }
@@ -99,6 +99,17 @@ class Projects extends Controller
     public function onUpdateTaskStatus()
     {
         Task::where('id', post('task'))->update(['status' => post('status')]);
+        return response()->json(200);
+    }
+
+    public function onUpdateTasksorder()
+    {
+        $tasks = post('tasks');
+
+        foreach ($tasks as $key => $id) {
+            Task::where('id', $id)->update(['sort_order' => $key]);
+        }
+
         return response()->json(200);
     }
 }

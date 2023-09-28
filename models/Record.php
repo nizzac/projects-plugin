@@ -20,9 +20,21 @@ class Record extends Model
     /**
      * @var array rules for validation
      */
-    public $rules = [];
+    public $rules = [
+        'user' => 'required',
+        'task' => 'required',
+        'start' => 'required',
+        'end' => 'required',
+        'duration' => 'required'
+    ];
 
     public $dates = ['start', 'end'];
+
+    public $appends = [
+        'formatted_date',
+        'formatted_start',
+        'formatted_end',
+    ];
 
     public $belongsTo = [
         'user' => [User::class],
@@ -75,6 +87,21 @@ class Record extends Model
     public function getDurationStringAttribute()
     {
         return $this->getDurationString();    
+    }
+
+    public function getFormattedDateAttribute()
+    {
+        return $this->start->format('d/m/y');
+    }
+
+    public function getFormattedStartAttribute()
+    {
+        return $this->start->format('g:ia');
+    }
+
+    public function getFormattedEndAttribute()
+    {
+        return $this->end->format('g:ia');
     }
 
     public function filterFields($fields, $context)
