@@ -1,13 +1,5 @@
 <?php
 
-<<<<<<< HEAD
-use Impelling\Projects\Api\Tasks;
-use Impelling\Projects\Middleware\ProjectsMiddleware;
-
-Route::group(['middleware' => ProjectsMiddleware::class], function() {
-    Route::get('/api/tasks/{id}', [Tasks::class, 'index']);
-});
-=======
 use Unspun\Projects\Api\Tasks;
 use Unspun\Projects\Middleware\ProjectsMiddleware;
 
@@ -18,4 +10,3 @@ Route::group(['middleware' => ProjectsMiddleware::class], function() {
     Route::post('/api/task/{id}', [Tasks::class, 'createTask']);
     Route::post('/api/tasks-order/{id}', [Tasks::class, 'updateTasksOrder']);
 });
->>>>>>> add-access-tokens

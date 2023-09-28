@@ -7,11 +7,7 @@ fields:
     project:
         label: Project
         type: recordfinder
-<<<<<<< HEAD
-        list: ~/plugins/impelling/projects/models/project/columns.yaml
-=======
         list: ~/plugins/unspun/projects/models/project/columns.yaml
->>>>>>> add-access-tokens
         recordsPerPage: 10
         title: Choose Project
         nameFrom: name

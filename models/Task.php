@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-<?php namespace Impelling\Projects\Models;
-=======
 <?php namespace Unspun\Projects\Models;
->>>>>>> add-access-tokens
 
 use Model;
 use Backend;
@@ -21,11 +17,7 @@ class Task extends Model
     /**
      * @var string table name
      */
-<<<<<<< HEAD
-    public $table = 'impelling_projects_tasks';
-=======
     public $table = 'unspun_projects_tasks';
->>>>>>> add-access-tokens
 
     /**
      * @var array rules for validation
