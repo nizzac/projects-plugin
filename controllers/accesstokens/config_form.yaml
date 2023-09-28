@@ -6,6 +6,15 @@
 name: Access Token
 
 # Model Form Field configuration
+<<<<<<< HEAD
+form: $/impelling/projects/models/accesstoken/fields.yaml
+
+# Model Class name
+modelClass: Impelling\Projects\Models\AccessToken
+
+# Default redirect location
+defaultRedirect: impelling/projects/accesstokens
+=======
 form: $/unspun/projects/models/accesstoken/fields.yaml
 
 # Model Class name
@@ -13,18 +22,29 @@ modelClass: Unspun\Projects\Models\AccessToken
 
 # Default redirect location
 defaultRedirect: unspun/projects/accesstokens
+>>>>>>> add-access-tokens
 
 # Create page
 create:
     title: backend::lang.form.create_title
+<<<<<<< HEAD
+    redirect: impelling/projects/accesstokens/update/:id
+    redirectClose: impelling/projects/accesstokens
+=======
     redirect: unspun/projects/accesstokens/update/:id
     redirectClose: unspun/projects/accesstokens
+>>>>>>> add-access-tokens
 
 # Update page
 update:
     title: backend::lang.form.update_title
+<<<<<<< HEAD
+    redirect: impelling/projects/accesstokens
+    redirectClose: impelling/projects/accesstokens
+=======
     redirect: unspun/projects/accesstokens
     redirectClose: unspun/projects/accesstokens
+>>>>>>> add-access-tokens
 
 # Preview page
 preview:

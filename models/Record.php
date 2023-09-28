@@ -1,4 +1,8 @@
+<<<<<<< HEAD
+<?php namespace Impelling\Projects\Models;
+=======
 <?php namespace Unspun\Projects\Models;
+>>>>>>> add-access-tokens
 
 use Model;
 use Backend\Models\User;
@@ -15,7 +19,11 @@ class Record extends Model
     /**
      * @var string table name
      */
+<<<<<<< HEAD
+    public $table = 'impelling_projects_records';
+=======
     public $table = 'unspun_projects_records';
+>>>>>>> add-access-tokens
 
     /**
      * @var array rules for validation
@@ -87,6 +95,8 @@ class Record extends Model
     public function getDurationStringAttribute()
     {
         return $this->getDurationString();    
+<<<<<<< HEAD
+=======
     }
 
     public function getFormattedDateAttribute()
@@ -102,6 +112,7 @@ class Record extends Model
     public function getFormattedEndAttribute()
     {
         return $this->end->format('g:ia');
+>>>>>>> add-access-tokens
     }
 
     public function filterFields($fields, $context)
