@@ -1,10 +1,6 @@
 <div data-control="toolbar">
     <a
-<<<<<<< HEAD
-        href="<?= Backend::url('impelling/projects/accesstokens/create') ?>"
-=======
         href="<?= Backend::url('unspun/projects/accesstokens/create') ?>"
->>>>>>> add-access-tokens
         class="btn btn-primary oc-icon-plus">
         <?= e(trans('backend::lang.list.create_button', ['name'=>'Access Token'])) ?>
     </a>

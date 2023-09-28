@@ -1,16 +1,9 @@
 <?php
 
-<<<<<<< HEAD
-namespace Impelling\Projects\Middleware;
-
-use Closure;
-use Impelling\Projects\Models\AccessToken;
-=======
 namespace Unspun\Projects\Middleware;
 
 use Closure;
 use Unspun\Projects\Models\AccessToken;
->>>>>>> add-access-tokens
 
 class ProjectsMiddleware
 {

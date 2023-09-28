@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-<?php namespace Impelling\Projects\Controllers;
-=======
 <?php namespace Unspun\Projects\Controllers;
->>>>>>> add-access-tokens
 
 use BackendMenu;
 use Backend\Classes\Controller;
@@ -32,11 +28,7 @@ class AccessTokens extends Controller
     /**
      * @var array required permissions
      */
-<<<<<<< HEAD
-    public $requiredPermissions = ['impelling.projects.accesstokens'];
-=======
     public $requiredPermissions = ['unspun.projects.accesstokens'];
->>>>>>> add-access-tokens
 
     /**
      * __construct the controller
@@ -45,10 +37,6 @@ class AccessTokens extends Controller
     {
         parent::__construct();
 
-<<<<<<< HEAD
-        BackendMenu::setContext('Impelling.Projects', 'projects', 'accesstokens');
-=======
         BackendMenu::setContext('Unspun.Projects', 'projects', 'accesstokens');
->>>>>>> add-access-tokens
     }
 }
