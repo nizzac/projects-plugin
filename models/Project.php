@@ -31,7 +31,12 @@ class Project extends Model implements HasApiTokensContract
     ];
 
     public $hasMany = [
-        'tasks' => Task::class
+        'tasks' => Task::class,
+        'access_tokens' => AccessToken::class,
+        'active_access_tokens' => [
+            AccessToken::class,
+            'scope' => 'active'
+        ]
     ];
 
     public $hasManyThrough = [

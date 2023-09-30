@@ -30,7 +30,7 @@ class Task extends Model
 
     public $dates = ['due_date'];
 
-    public $appends = ['url', 'formatted_due_date', 'assignee_name'];
+    public $appends = ['url', 'formatted_due_date', 'assignee_name', 'estimate_string'];
 
     public $belongsTo = [
         'project' => [Project::class],
