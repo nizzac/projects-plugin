@@ -1,12 +1,12 @@
 <?php
 
-namespace Unspun\Projects\Api;
+namespace Nizzac\Projects\Api;
 
 use Backend\Models\User;
 use Carbon\Carbon;
 use Exception;
-use Unspun\Projects\Models\Project;
-use Unspun\Projects\Models\Task;
+use Nizzac\Projects\Models\Project;
+use Nizzac\Projects\Models\Task;
 
 class Tasks
 {

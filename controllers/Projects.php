@@ -1,11 +1,11 @@
-<?php namespace Unspun\Projects\Controllers;
+<?php namespace Nizzac\Projects\Controllers;
 
 use Str;
 use stdClass;
 use BackendMenu;
 use Backend\Classes\Controller;
-use Unspun\Projects\Models\Task;
-use Unspun\Projects\Models\AccessToken;
+use Nizzac\Projects\Models\Task;
+use Nizzac\Projects\Models\AccessToken;
 
 /**
  * Projects Backend Controller
@@ -32,7 +32,7 @@ class Projects extends Controller
     /**
      * @var array required permissions
      */
-    public $requiredPermissions = ['unspun.projects.projects'];
+    public $requiredPermissions = ['nizzac.projects.projects'];
 
     /**
      * __construct the controller
@@ -41,7 +41,7 @@ class Projects extends Controller
     {
         parent::__construct();
 
-        BackendMenu::setContext('Unspun.Projects', 'projects', 'projects');
+        BackendMenu::setContext('Nizzac.Projects', 'projects', 'projects');
     }
 
     public function update($projectId = null)

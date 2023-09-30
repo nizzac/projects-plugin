@@ -3,16 +3,16 @@
 # ===================================
 
 # Model List Column configuration
-list: $/unspun/projects/models/project/columns.yaml
+list: $/nizzac/projects/models/project/columns.yaml
 
 # Model Class name
-modelClass: Unspun\Projects\Models\Project
+modelClass: Nizzac\Projects\Models\Project
 
 # List Title
 title: Manage Projects
 
 # Link URL for each record
-recordUrl: unspun/projects/projects/update/:id
+recordUrl: nizzac/projects/projects/update/:id
 
 # Message to display if the list is empty
 noRecordsMessage: backend::lang.list.no_records

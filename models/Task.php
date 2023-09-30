@@ -1,4 +1,4 @@
-<?php namespace Unspun\Projects\Models;
+<?php namespace Nizzac\Projects\Models;
 
 use Model;
 use Backend;
@@ -17,7 +17,7 @@ class Task extends Model
     /**
      * @var string table name
      */
-    public $table = 'unspun_projects_tasks';
+    public $table = 'nizzac_projects_tasks';
 
     /**
      * @var array rules for validation
@@ -87,7 +87,7 @@ class Task extends Model
 
     public function getUrlAttribute()
     {
-        return Backend::url("unspun/projects/tasks/update/".$this->id);
+        return Backend::url("nizzac/projects/tasks/update/".$this->id);
     }
 
     public function getFormattedDueDateAttribute()

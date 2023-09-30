@@ -1,4 +1,4 @@
-<?php namespace Unspun\Projects;
+<?php namespace Nizzac\Projects;
 
 use Backend;
 use System\Classes\PluginBase;
@@ -18,7 +18,7 @@ class Plugin extends PluginBase
         return [
             'name' => 'Projects',
             'description' => 'Time management for web projects',
-            'author' => 'Unspun',
+            'author' => 'Nizzac',
             'icon' => 'icon-leaf'
         ];
     }
@@ -31,38 +31,38 @@ class Plugin extends PluginBase
         return [
             'projects' => [
                 'label' => 'Projects',
-                'url' => Backend::url('unspun/projects/projects'),
+                'url' => Backend::url('nizzac/projects/projects'),
                 'icon' => 'icon-leaf',
-                'permissions' => ['unspun.projects.*'],
+                'permissions' => ['nizzac.projects.*'],
                 'order' => 500,
                 
                 'sideMenu' => [
                     'projects' => [
                         'label' => 'Projects',
-                        'url' => Backend::url('unspun/projects/projects'),
+                        'url' => Backend::url('nizzac/projects/projects'),
                         'icon' => 'icon-leaf',
-                        'permissions' => ['unspun.projects.*'],
+                        'permissions' => ['nizzac.projects.*'],
                         'order' => 500,
                     ],
                     'tasks' => [
                         'label' => 'Tasks',
-                        'url' => Backend::url('unspun/projects/tasks'),
+                        'url' => Backend::url('nizzac/projects/tasks'),
                         'icon' => 'icon-leaf',
-                        'permissions' => ['unspun.projects.*'],
+                        'permissions' => ['nizzac.projects.*'],
                         'order' => 501,
                     ],
                     'records' => [
                         'label' => 'Records',
-                        'url' => Backend::url('unspun/projects/records'),
+                        'url' => Backend::url('nizzac/projects/records'),
                         'icon' => 'icon-leaf',
-                        'permissions' => ['unspun.projects.*'],
+                        'permissions' => ['nizzac.projects.*'],
                         'order' => 502,
                     ],
                     'access_tokens' => [
                         'label' => 'Access Tokens',
-                        'url' => Backend::url('unspun/projects/accesstokens'),
+                        'url' => Backend::url('nizzac/projects/accesstokens'),
                         'icon' => 'icon-lock',
-                        'permissions' => ['unspun.projects.*'],
+                        'permissions' => ['nizzac.projects.*'],
                         'order' => 503
                     ]
                 ]

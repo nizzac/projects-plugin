@@ -1,4 +1,4 @@
-<?php namespace Unspun\Projects\Models;
+<?php namespace Nizzac\Projects\Models;
 
 use Model;
 use Backend\Models\User;
@@ -15,7 +15,7 @@ class Record extends Model
     /**
      * @var string table name
      */
-    public $table = 'unspun_projects_records';
+    public $table = 'nizzac_projects_records';
 
     /**
      * @var array rules for validation

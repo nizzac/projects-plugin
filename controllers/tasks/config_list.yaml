@@ -3,16 +3,16 @@
 # ===================================
 
 # Model List Column configuration
-list: $/unspun/projects/models/task/columns.yaml
+list: $/nizzac/projects/models/task/columns.yaml
 
 # Model Class name
-modelClass: Unspun\Projects\Models\Task
+modelClass: Nizzac\Projects\Models\Task
 
 # List Title
 title: Manage Tasks
 
 # Link URL for each record
-recordUrl: unspun/projects/tasks/update/:id
+recordUrl: nizzac/projects/tasks/update/:id
 
 # Message to display if the list is empty
 noRecordsMessage: backend::lang.list.no_records

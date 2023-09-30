@@ -7,7 +7,7 @@ fields:
     project:
         label: Project
         type: recordfinder
-        list: ~/plugins/unspun/projects/models/project/columns.yaml
+        list: ~/plugins/nizzac/projects/models/project/columns.yaml
         recordsPerPage: 10
         title: Choose Project
         nameFrom: name

@@ -1,5 +1,5 @@
 {
-    "name": "unspun/projects-plugin",
+    "name": "nizzac/projects-plugin",
     "type": "october-plugin",
     "description": "A simple project and time management plugin",
     "require": {

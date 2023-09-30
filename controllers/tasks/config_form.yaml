@@ -6,25 +6,25 @@
 name: Task
 
 # Model Form Field configuration
-form: $/unspun/projects/models/task/fields.yaml
+form: $/nizzac/projects/models/task/fields.yaml
 
 # Model Class name
-modelClass: Unspun\Projects\Models\Task
+modelClass: Nizzac\Projects\Models\Task
 
 # Default redirect location
-defaultRedirect: unspun/projects/tasks
+defaultRedirect: nizzac/projects/tasks
 
 # Create page
 create:
     title: backend::lang.form.create_title
-    redirect: unspun/projects/tasks/update/:id
-    redirectClose: unspun/projects/tasks
+    redirect: nizzac/projects/tasks/update/:id
+    redirectClose: nizzac/projects/tasks
 
 # Update page
 update:
     title: backend::lang.form.update_title
-    redirect: unspun/projects/tasks
-    redirectClose: unspun/projects/tasks
+    redirect: nizzac/projects/tasks
+    redirectClose: nizzac/projects/tasks
 
 # Preview page
 preview:

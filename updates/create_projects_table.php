@@ -1,4 +1,4 @@
-<?php namespace Unspun\Projects\Updates;
+<?php namespace Nizzac\Projects\Updates;
 
 use Schema;
 use October\Rain\Database\Schema\Blueprint;
@@ -16,7 +16,7 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('unspun_projects_projects', function(Blueprint $table) {
+        Schema::create('nizzac_projects_projects', function(Blueprint $table) {
             $table->engine = 'InnoDB';
             $table->increments('id');
             $table->string('api_id')->nullable();
@@ -33,6 +33,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('unspun_projects_projects');
+        Schema::dropIfExists('nizzac_projects_projects');
     }
 };

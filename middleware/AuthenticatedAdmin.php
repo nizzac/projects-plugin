@@ -1,6 +1,6 @@
 <?php
 
-namespace Unspun\Projects\Middleware;
+namespace Nizzac\Projects\Middleware;
 
 use Backend\Facades\BackendAuth;
 use Closure;

@@ -1,4 +1,4 @@
-<?php namespace Unspun\Projects\Controllers;
+<?php namespace Nizzac\Projects\Controllers;
 
 use BackendMenu;
 use Backend\Classes\Controller;
@@ -28,7 +28,7 @@ class Tasks extends Controller
     /**
      * @var array required permissions
      */
-    public $requiredPermissions = ['unspun.projects.tasks'];
+    public $requiredPermissions = ['nizzac.projects.tasks'];
 
     /**
      * __construct the controller
@@ -37,6 +37,6 @@ class Tasks extends Controller
     {
         parent::__construct();
 
-        BackendMenu::setContext('Unspun.Projects', 'projects', 'tasks');
+        BackendMenu::setContext('Nizzac.Projects', 'projects', 'tasks');
     }
 }

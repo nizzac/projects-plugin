@@ -1,4 +1,4 @@
-<?php namespace Unspun\Projects\Updates;
+<?php namespace Nizzac\Projects\Updates;
 
 use Schema;
 use October\Rain\Database\Schema\Blueprint;
@@ -16,7 +16,7 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('unspun_projects_tasks', function(Blueprint $table) {
+        Schema::create('nizzac_projects_tasks', function(Blueprint $table) {
             $table->engine = 'InnoDB';
             $table->increments('id');
             $table->integer('user_id')->unsigned();
@@ -31,7 +31,7 @@ return new class extends Migration
             $table->softDeletes();
 
             $table->foreign('user_id')->references('id')->on('backend_users');
-            $table->foreign('project_id')->references('id')->on('unspun_projects_projects');
+            $table->foreign('project_id')->references('id')->on('nizzac_projects_projects');
         });
     }
 
@@ -40,6 +40,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('unspun_projects_tasks');
+        Schema::dropIfExists('nizzac_projects_tasks');
     }
 };

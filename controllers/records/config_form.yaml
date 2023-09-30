@@ -6,25 +6,25 @@
 name: Record
 
 # Model Form Field configuration
-form: $/unspun/projects/models/record/fields.yaml
+form: $/nizzac/projects/models/record/fields.yaml
 
 # Model Class name
-modelClass: Unspun\Projects\Models\Record
+modelClass: Nizzac\Projects\Models\Record
 
 # Default redirect location
-defaultRedirect: unspun/projects/records
+defaultRedirect: nizzac/projects/records
 
 # Create page
 create:
     title: backend::lang.form.create_title
-    redirect: unspun/projects/records/update/:id
-    redirectClose: unspun/projects/records
+    redirect: nizzac/projects/records/update/:id
+    redirectClose: nizzac/projects/records
 
 # Update page
 update:
     title: backend::lang.form.update_title
-    redirect: unspun/projects/records
-    redirectClose: unspun/projects/records
+    redirect: nizzac/projects/records
+    redirectClose: nizzac/projects/records
 
 # Preview page
 preview:

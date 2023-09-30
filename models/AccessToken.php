@@ -1,4 +1,4 @@
-<?php namespace Unspun\Projects\Models;
+<?php namespace Nizzac\Projects\Models;
 
 use Model;
 
@@ -14,7 +14,7 @@ class AccessToken extends Model
     /**
      * @var string table name
      */
-    public $table = 'unspun_projects_access_tokens';
+    public $table = 'nizzac_projects_access_tokens';
 
     /**
      * @var array rules for validation

@@ -6,25 +6,25 @@
 name: Access Token
 
 # Model Form Field configuration
-form: $/unspun/projects/models/accesstoken/fields.yaml
+form: $/nizzac/projects/models/accesstoken/fields.yaml
 
 # Model Class name
-modelClass: Unspun\Projects\Models\AccessToken
+modelClass: Nizzac\Projects\Models\AccessToken
 
 # Default redirect location
-defaultRedirect: unspun/projects/accesstokens
+defaultRedirect: nizzac/projects/accesstokens
 
 # Create page
 create:
     title: backend::lang.form.create_title
-    redirect: unspun/projects/accesstokens/update/:id
-    redirectClose: unspun/projects/accesstokens
+    redirect: nizzac/projects/accesstokens/update/:id
+    redirectClose: nizzac/projects/accesstokens
 
 # Update page
 update:
     title: backend::lang.form.update_title
-    redirect: unspun/projects/accesstokens
-    redirectClose: unspun/projects/accesstokens
+    redirect: nizzac/projects/accesstokens
+    redirectClose: nizzac/projects/accesstokens
 
 # Preview page
 preview:

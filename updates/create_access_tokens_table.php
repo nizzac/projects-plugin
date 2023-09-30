@@ -1,6 +1,6 @@
 <?php
 
-namespace Unspun\Projects\Updates;
+namespace Nizzac\Projects\Updates;
 
 use Schema;
 use October\Rain\Database\Schema\Blueprint;
@@ -13,7 +13,7 @@ class CreateAccessTokensTable extends Migration
      */
     public function up()
     {
-        Schema::create('unspun_projects_access_tokens', function(Blueprint $table) {
+        Schema::create('nizzac_projects_access_tokens', function(Blueprint $table) {
             $table->engine = 'InnoDB';
             $table->increments('id');
             $table->integer('project_id')->unsigned();
@@ -24,7 +24,7 @@ class CreateAccessTokensTable extends Migration
             $table->timestamps();
             $table->softDeletes();
             
-            $table->foreign('project_id')->references('id')->on('unspun_projects_projects');
+            $table->foreign('project_id')->references('id')->on('nizzac_projects_projects');
         });
     }
 
@@ -33,6 +33,6 @@ class CreateAccessTokensTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('unspun_projects_access_tokens');
+        Schema::dropIfExists('nizzac_projects_access_tokens');
     }
 }

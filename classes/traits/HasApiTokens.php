@@ -1,6 +1,6 @@
 <?php
 
-namespace Unspun\Projects\Classes\Traits;
+namespace Nizzac\Projects\Classes\Traits;
 
 trait HasApiTokens
 {

@@ -1,9 +1,9 @@
 <?php
 
-namespace Unspun\Projects\Middleware;
+namespace Nizzac\Projects\Middleware;
 
 use Closure;
-use Unspun\Projects\Models\AccessToken;
+use Nizzac\Projects\Models\AccessToken;
 
 class ProjectsMiddleware
 {

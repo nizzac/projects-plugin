@@ -1,6 +1,6 @@
 <?php
 
-namespace Unspun\Projects\Classes\Contracts;
+namespace Nizzac\Projects\Classes\Contracts;
 
 interface HasApiTokens
 {

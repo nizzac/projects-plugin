@@ -20933,13 +20933,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _Badge_vue_vue_type_template_id_e120dffc__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Badge.vue?vue&type=template&id=e120dffc */ "./resources/components/Badge.vue?vue&type=template&id=e120dffc");
 /* harmony import */ var _Badge_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Badge.vue?vue&type=script&lang=js */ "./resources/components/Badge.vue?vue&type=script&lang=js");
-/* harmony import */ var _shared_httpd_nizzac_plugins_unspun_projects_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
+/* harmony import */ var _shared_httpd_nizzac_plugins_nizzac_projects_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
 
 
 
 
 ;
-const __exports__ = /*#__PURE__*/(0,_shared_httpd_nizzac_plugins_unspun_projects_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__["default"])(_Badge_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__["default"], [['render',_Badge_vue_vue_type_template_id_e120dffc__WEBPACK_IMPORTED_MODULE_0__.render],['__file',"resources/components/Badge.vue"]])
+const __exports__ = /*#__PURE__*/(0,_shared_httpd_nizzac_plugins_nizzac_projects_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__["default"])(_Badge_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__["default"], [['render',_Badge_vue_vue_type_template_id_e120dffc__WEBPACK_IMPORTED_MODULE_0__.render],['__file',"resources/components/Badge.vue"]])
 /* hot reload */
 if (false) {}
 
@@ -20961,13 +20961,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _ProjectTasks_vue_vue_type_template_id_09a98234__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./ProjectTasks.vue?vue&type=template&id=09a98234 */ "./resources/components/ProjectTasks.vue?vue&type=template&id=09a98234");
 /* harmony import */ var _ProjectTasks_vue_vue_type_script_setup_true_lang_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./ProjectTasks.vue?vue&type=script&setup=true&lang=js */ "./resources/components/ProjectTasks.vue?vue&type=script&setup=true&lang=js");
-/* harmony import */ var _shared_httpd_nizzac_plugins_unspun_projects_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
+/* harmony import */ var _shared_httpd_nizzac_plugins_nizzac_projects_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
 
 
 
 
 ;
-const __exports__ = /*#__PURE__*/(0,_shared_httpd_nizzac_plugins_unspun_projects_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__["default"])(_ProjectTasks_vue_vue_type_script_setup_true_lang_js__WEBPACK_IMPORTED_MODULE_1__["default"], [['render',_ProjectTasks_vue_vue_type_template_id_09a98234__WEBPACK_IMPORTED_MODULE_0__.render],['__file',"resources/components/ProjectTasks.vue"]])
+const __exports__ = /*#__PURE__*/(0,_shared_httpd_nizzac_plugins_nizzac_projects_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__["default"])(_ProjectTasks_vue_vue_type_script_setup_true_lang_js__WEBPACK_IMPORTED_MODULE_1__["default"], [['render',_ProjectTasks_vue_vue_type_template_id_09a98234__WEBPACK_IMPORTED_MODULE_0__.render],['__file',"resources/components/ProjectTasks.vue"]])
 /* hot reload */
 if (false) {}
 
@@ -20989,13 +20989,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _TaskCard_vue_vue_type_template_id_acbff4b4__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./TaskCard.vue?vue&type=template&id=acbff4b4 */ "./resources/components/TaskCard.vue?vue&type=template&id=acbff4b4");
 /* harmony import */ var _TaskCard_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./TaskCard.vue?vue&type=script&lang=js */ "./resources/components/TaskCard.vue?vue&type=script&lang=js");
-/* harmony import */ var _shared_httpd_nizzac_plugins_unspun_projects_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
+/* harmony import */ var _shared_httpd_nizzac_plugins_nizzac_projects_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
 
 
 
 
 ;
-const __exports__ = /*#__PURE__*/(0,_shared_httpd_nizzac_plugins_unspun_projects_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__["default"])(_TaskCard_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__["default"], [['render',_TaskCard_vue_vue_type_template_id_acbff4b4__WEBPACK_IMPORTED_MODULE_0__.render],['__file',"resources/components/TaskCard.vue"]])
+const __exports__ = /*#__PURE__*/(0,_shared_httpd_nizzac_plugins_nizzac_projects_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__["default"])(_TaskCard_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__["default"], [['render',_TaskCard_vue_vue_type_template_id_acbff4b4__WEBPACK_IMPORTED_MODULE_0__.render],['__file',"resources/components/TaskCard.vue"]])
 /* hot reload */
 if (false) {}
 
@@ -26679,7 +26679,7 @@ module.exports = NATIVE_SYMBOL
 /******/ 			return __webpack_require__.O(result);
 /******/ 		}
 /******/ 		
-/******/ 		var chunkLoadingGlobal = self["webpackChunkunspun_project"] = self["webpackChunkunspun_project"] || [];
+/******/ 		var chunkLoadingGlobal = self["webpackChunknizzac_project"] = self["webpackChunknizzac_project"] || [];
 /******/ 		chunkLoadingGlobal.forEach(webpackJsonpCallback.bind(null, 0));
 /******/ 		chunkLoadingGlobal.push = webpackJsonpCallback.bind(null, chunkLoadingGlobal.push.bind(chunkLoadingGlobal));
 /******/ 	})();

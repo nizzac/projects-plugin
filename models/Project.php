@@ -1,10 +1,10 @@
-<?php namespace Unspun\Projects\Models;
+<?php namespace Nizzac\Projects\Models;
 
 use Str;
 use Model;
 use RainLab\User\Facades\Auth;
-use Unspun\Projects\Classes\Traits\HasApiTokens;
-use Unspun\Projects\Classes\Contracts\HasApiTokens as HasApiTokensContract;
+use Nizzac\Projects\Classes\Traits\HasApiTokens;
+use Nizzac\Projects\Classes\Contracts\HasApiTokens as HasApiTokensContract;
 
 /**
  * Project Model
@@ -19,7 +19,7 @@ class Project extends Model implements HasApiTokensContract
     /**
      * @var string table name
      */
-    public $table = 'unspun_projects_projects';
+    public $table = 'nizzac_projects_projects';
 
     /**
      * @var array rules for validation
