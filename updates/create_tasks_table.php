@@ -24,7 +24,7 @@ return new class extends Migration
             $table->string('title')->nullable();
             $table->text('description')->nullable();
             $table->string('status')->nullable();
-            $table->string('estimate')->nullable();
+            $table->integer('estimate')->unsigned()->nullable();
             $table->timestamp('due_date')->nullable();
             $table->integer('sort_order')->unsigned()->default(0);
             $table->timestamps();

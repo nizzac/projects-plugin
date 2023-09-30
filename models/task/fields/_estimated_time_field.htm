@@ -1,0 +1,10 @@
+<div class="d-flex gap-3">
+    <div class="input-group">
+        <span class="input-group-text">Hours</span>
+        <input type="number" min="0" max="24" name="Task[estimate_hours]" class="form-control" value="<?=$model->estimate_hours ?: 0 ?>"/>
+    </div>
+    <div class="input-group">
+        <span class="input-group-text">Minutes</span>
+        <input type="number" min="0" max="60" name="Task[estimate_minutes]" class="form-control" value="<?=$model->estimate_minutes ?: 0 ?>"/>
+    </div>
+</div>

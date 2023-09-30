@@ -19,3 +19,6 @@ columns:
         label: Due date
         type: datetime
         format: d/m/y
+
+    estimate_string:
+        label: Estimated Time
