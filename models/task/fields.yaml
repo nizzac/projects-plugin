@@ -45,6 +45,13 @@ fields:
         label: Estimated Time
         span: row
         cssClass: col-md-6
+        type: partial
+        path: $/nizzac/projects/models/task/fields/_estimated_time_field.htm
+
+    # estimate:
+    #     label: Estimated Time
+    #     span: row
+    #     cssClass: col-md-6
 
     due_date:
         label: Due Date

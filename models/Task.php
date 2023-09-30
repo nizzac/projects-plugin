@@ -47,6 +47,14 @@ class Task extends Model
         $this->sort_order = $otherTasksWithSameStatus ? $otherTasksWithSameStatus->sort_order+1 : 0;
     }
 
+    public function beforeSave()
+    {
+        $hours = (int) (post('Task.estimate_hours') ?: 0) * 60;
+        $minutes = (int) post('Task.estimate_minutes') ?: 0;
+        $estimate = $hours + $minutes;
+        $this->estimate = $estimate > 0 ? $estimate : null;
+    }
+
     public function getStatusOptions()
     {
         return [
@@ -56,6 +64,39 @@ class Task extends Model
             'approval' => "Approval",
             "complete" => "Complete",
         ];
+    }
+
+    public function getEstimateHoursAttribute()
+    {
+        return $this->estimate ? floor($this->estimate / 60) : 0;
+    }
+
+    public function getEstimateMinutesAttribute()
+    {
+        return $this->estimate ? $this->estimate - ($this->estimate_hours * 60) : 0;
+    }
+
+    public function getEstimateStringAttribute()
+    {
+        $estimate = [];
+        
+        if (!$this->estimate) {
+            return;
+        }
+        
+        if ($this->estimate_hours > 0) {
+            $estimate['hours'] = "{$this->estimate_hours}h";
+        }
+        
+        if ($this->estimate_minutes > 0) {
+            $estimate['minutes'] = "{$this->estimate_minutes}m";
+        }
+
+        if (empty($estimate)) {
+            return;
+        }
+
+        return implode(' ', $estimate);
     }
 
     public static function getTasksByStatus($projectId) {
