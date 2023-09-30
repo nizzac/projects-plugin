@@ -44,7 +44,7 @@ class Task extends Model
     public function beforeCreate()
     {
         $otherTasksWithSameStatus = self::where('project_id', $this->project_id)->where('status', $this->status)->orderBy('sort_order', 'desc')->first();
-        $this->sort_order = $otherTasksWithSameStatus->sort_order+1;
+        $this->sort_order = $otherTasksWithSameStatus ? $otherTasksWithSameStatus->sort_order+1 : 0;
     }
 
     public function getStatusOptions()
