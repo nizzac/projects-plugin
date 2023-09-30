@@ -133,7 +133,7 @@ class Task extends Model
 
     public function getFormattedDueDateAttribute()
     {
-        return $this->due_date->format('d/m/Y');
+        return $this->due_date ? $this->due_date->format('d/m/Y') : null;
     }
 
     public function getAssigneeNameAttribute()
